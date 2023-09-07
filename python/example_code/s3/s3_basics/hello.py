@@ -3,7 +3,8 @@
 
 # snippet-start:[python.example_code.s3.Hello]
 import boto3
-
+import logging
+boto3.set_stream_logger('',logging.DEBUG)
 def hello_s3():
     """
     Use the AWS SDK for Python (Boto3) to create an Amazon Simple Storage Service
@@ -19,3 +20,4 @@ def hello_s3():
 if __name__ == '__main__':
     hello_s3()
 # snippet-end:[python.example_code.s3.Hello]
+
